@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine's Day</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="valentine.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+<div class="hearts-bg"></div>
+
+<div class="container">
+
+  <!-- FRAME 0 — SOBRE -->
+  <div class="frame active">
+    <div class="envelope" id="openEnvelope">
+      <div class="envelope-flap"></div>
+      <div class="envelope-body"></div>
+    </div>
+    <p class="hint">Toca para abrir</p>
+  </div>
+
+  <!-- FRAME 1 -->
+  <div class="frame">
+    <div class="letter-card">
+      <h1>Para ti</h1>
+      <p class="letter-text">
+        No sabía muy bien cómo decirlo,<br>
+        así que decidí escribirlo bonito.
+      </p>
+      <button class="next">Sigue leyendo</button>
+    </div>
+  </div>
+
+  <!-- FRAME 2 -->
+  <div class="frame">
+    <div class="letter-card">
+      <p class="letter-text">
+        Desde que llegaste,<br>
+        las cosas pequeñas se sienten más grandes.
+      </p>
+      <button class="next">Sigue</button>
+    </div>
+  </div>
+
+  <!-- FRAME 3 -->
+  <div class="frame">
+    <div class="letter-card">
+      <p class="letter-text">
+        Y no quería dejar pasar este momento<br>
+        sin preguntarte algo importante.
+      </p>
+      <button class="next">…</button>
+    </div>
+  </div>
+
+  <!-- FRAME 4 -->
+  <div class="frame">
+    <h1 class="big-question">¿Quieres ser mi Valentine? 💗</h1>
+    <div class="options">
+      <button class="yes">Sí</button>
+      <button class="next">Obvio</button>
+    </div>
+  </div>
+
+  <!-- FRAME 5 -->
+  <div class="frame">
+    <h1 class="big-title">Sabía que dirías que sí</h1>
+    <p class="subtitle">
+      Gracias por hacer mi mundo más bonito.<br>
+      Este es solo el comienzo
+    </p>
+    <button class="next">Continuar</button>
+  </div>
+
+ <!-- FRAME 6 -->
+<!-- FRAME 6 -->
+<div class="frame">
+  <div class="letter-card" id="letterContent">
+
+    <h1 class="no-pdf">Tu turno ✍️</h1>
+
+    <p class="letter-text no-pdf">
+      Si quieres, puedes escribir algo aquí.
+    </p>
+
+    <!-- donde escribe -->
+    <textarea
+      id="responseText"
+      class="no-pdf"
+      placeholder="Escribe tu carta aquí..."
+    ></textarea>
+
+    <!-- 👇 ESTE ES EL QUE SE EXPORTA -->
+    <div id="finalLetter" class="pdf-text"></div>
+
+    <div class="options no-pdf">
+      <button id="downloadLetter">Guardar como PDF</button>
+    </div>
+
+    <span class="signature">
+      key's wed space (valentine edition)
+    </span>
+
+  </div>
+</div>
+
+
+
+<script src="valentine.js"></script>
+</body>
+</html>
